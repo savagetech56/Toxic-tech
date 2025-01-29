@@ -1,7 +1,9 @@
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
-<p align="center">
-    <a href="https://ibb.co/N6NMDtn"><img src="https://i.ibb.co/jkJGQRZ/5103aef05fd0d76b.jpg" alt="01" border="0" /></a>
-</p>
+<div align="center">
+<img src="assets/README/Toxic Tech.svg">
+</div>
+
+
+# V2ray-Script
 
 ## `CONTACT OWNER !`
 For pointing IP:
