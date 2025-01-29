@@ -1,10 +1,3 @@
-<div align="center">
-<img src="assets/README/Toxic Tech.svg">
-</div>
-
-
-# V2ray-Script
-
 ## `CONTACT OWNER !`
 For pointing IP:
 <br><br><a href="https://wa.me//254716637803" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Whatsapp&label=Whatsapp&message=Click%20Here&color=#006400">
