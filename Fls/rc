@@ -1,0 +1,5 @@
+REPO="https://raw.githubusercontent.com/savagetech56/Toxic-tech/main/"
+
+
+
+wget -O /root/.config/rclone/rclone.conf "${REPO}Cfg/rclone.conf"

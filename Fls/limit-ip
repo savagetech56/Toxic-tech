@@ -1,0 +1,113 @@
+#!/bin/bash
+
+function send_log(){
+CHATID=$(grep -E "^#bot# " "/etc/bot/.bot.db" | cut -d ' ' -f 3)
+KEY=$(grep -E "^#bot# " "/etc/bot/.bot.db" | cut -d ' ' -f 2)
+TIME="10"
+URL="https://api.telegram.org/bot$KEY/sendMessage"
+TEXT="
+<code>────────────────────</code>
+<b>⚠️ NOTIFICATIONS MULTI LOGIN ⚠️</b>
+<code>────────────────────</code>
+<code>Username  : </code><code>$user</code>
+<code>Limit Ip    : </code><code>$iplimit</code>
+<code>Login Ip    : </code><code>$cekcek</code>
+<code>────────────────────</code>
+"
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+}
+function cek_lock() {
+cekcek=$(cat /etc/xray/.lock.db)
+if [[ $cekcek == "" ]]; then
+cat >/etc/xray/.lock.db <<EOF
+#vmess
+#vless
+#trojan
+EOF
+else
+echo -ne
+fi
+}
+function vmip(){
+#LIMITVMESSIP
+cek_lock
+sleep 10
+data=( `ls /etc/kyt/limit/vmess/ip`);
+#Created By Newbie Store
+    for user in "${data[@]}"
+    do
+        iplimit=$(cat /etc/kyt/limit/vmess/ip/$user)
+        ehh=$(cat /var/log/xray/access.log | grep -wE "$user" | cut -d " " -f 3 | sed 's/tcp://g' | cut -d ":" -f 1 | sort | uniq);
+        cekcek=$(echo -e "$ehh" | wc -l);
+        if [[ $cekcek -gt $iplimit ]]; then
+			uuid=$(grep -E "^},{" "/etc/xray/config.json" |  grep -i '"'"${user}"'"' | cut -d " " -f 2 | cut -d '"' -f 2 | uniq )
+			exp=$(grep -w "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+				sed -i '/#vmess$/a\### '"$user $exp $uuid"'' /etc/xray/.lock.db
+				sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
+				echo -n > /var/log/xray/access.log
+                systemctl restart xray >> /dev/null 2>&1
+                send_log
+                else
+            echo -ne
+        fi
+        sleep 0.1
+    done
+}
+function vlip(){
+#LIMITVLESSIP
+cek_lock
+sleep 10
+data=( `ls /etc/kyt/limit/vless/ip`);
+#Created By Newbie Store
+    for user in "${data[@]}"
+    do
+        iplimit=$(cat /etc/kyt/limit/vless/ip/$user)
+        ehh=$(cat /var/log/xray/access.log | grep "$user" | cut -d " " -f 3 | sed 's/tcp://g' | cut -d ":" -f 1 | sort | uniq);
+        cekcek=$(echo -e "$ehh" | wc -l);
+        if [[ $cekcek -gt $iplimit ]]; then
+			uuid=$(grep -E "^},{" "/etc/xray/config.json" |  grep -i '"'"${user}"'"' | cut -d " " -f 2 | cut -d '"' -f 2 | uniq )
+			exp=$(grep -w "^#& $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+				sed -i '/#vless$/a\#& '"$user $exp $uuid"'' /etc/xray/.lock.db
+				sed -i "/^#& $user $exp/,/^},{/d" /etc/xray/config.json
+				echo -n > /var/log/xray/access.log
+                  systemctl restart xray >> /dev/null 2>&1
+                  send_log
+                else
+            echo -ne
+        fi
+        sleep 0.1
+    done
+}
+function trip(){
+#LIMITIPTROJAN
+cek_lock
+sleep 10
+data=( `ls /etc/kyt/limit/trojan/ip`);
+#Created By Newbie Store
+    for user in "${data[@]}"
+    do
+        iplimit=$(cat /etc/kyt/limit/trojan/ip/$user)
+        ehh=$(cat /var/log/xray/access.log | grep "$user" | cut -d " " -f 3 | sed 's/tcp://g' | cut -d ":" -f 1 | sort | uniq);
+        cekcek=$(echo -e "$ehh" | wc -l);
+        if [[ $cekcek -gt $iplimit ]]; then
+			uuid=$(grep -E "^},{" "/etc/xray/config.json" |  grep -i '"'"${user}"'"' | cut -d " " -f 2 | cut -d '"' -f 2 | uniq )
+			exp=$(grep -w "^#! $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+				sed -i '/#trojan$/a\#! '"$user $exp $uuid"'' /etc/xray/.lock.db
+				sed -i "/^#! $user $exp/,/^},{/d" /etc/xray/config.json
+				echo -n > /var/log/xray/access.log
+                  systemctl restart xray >> /dev/null 2>&1
+                  send_log
+                else
+            echo -ne
+        fi
+        sleep 0.1
+    done
+}
+
+if [[ ${1} == "vmip" ]]; then
+vmip
+elif [[ ${1} == "vlip" ]]; then
+vlip
+elif [[ ${1} == "trip" ]]; then
+trip
+fi
