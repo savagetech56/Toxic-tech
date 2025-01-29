@@ -1,3 +1,8 @@
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
+<p align="center">
+    <a href="https://ibb.co/N6NMDtn"><img src="https://i.ibb.co/jkJGQRZ/5103aef05fd0d76b.jpg" alt="01" border="0" /></a>
+</p>
+
 ## `CONTACT OWNER !`
 For pointing IP:
 <br><br><a href="https://wa.me//254716637803" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Whatsapp&label=Whatsapp&message=Click%20Here&color=#006400">
