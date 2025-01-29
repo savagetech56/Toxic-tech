@@ -9,12 +9,11 @@ apt-get update -y && apt install curl wget bzip2 gzip xz-utils screen && if [[ !
 ```
 
 ## TESTED ON OS
-- UBUNTU Version 18 Atau 20 (Recommended)
-- DEBIAN Version 09 Atau 10
+- UBUNTU Version 18 and 20 (Recommended)
+- DEBIAN Version 09 and 10
 
-## FITUR TAMBAHAN
-- Pemasangan yang Dinamis
-- User Details Akun
+## NEW FEATURES 
+- User Details 
 - Auto Delete Expired
 - Auto Reboot Vps Server
 - Backup And Restore
