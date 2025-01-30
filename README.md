@@ -4,7 +4,7 @@
 <h2 align="center">
 Auto Script Install XRAY/SSH Websocket Service
 Mod By Savagetech56
-<img src="https://img.shields.io/badge/Release-v3.0-red.svg"></h2>
+<img src="https://img.shields.io/badge/Release-v5.0-red.svg"></h2>
 
 </p> 
 <h2 align="center"> Supported Linux Distribution</h2>
@@ -21,7 +21,7 @@ Mod By Savagetech56
 
 
 ## `CONTACT OWNER !`
-For pointing IP:
+For registering IP:
 <br><br><a href="https://wa.me//254716637803" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Whatsapp&label=Whatsapp&message=Click%20Here&color=#006400">
 
 ## update  OS Ubuntu Version 18 and 20
