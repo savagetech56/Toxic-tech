@@ -18,9 +18,11 @@ Mod By Savagetech56
 <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=ubuntu%2020.04 LTS&message=Focal Fossa&color=red"> 
 </p>
 
+### TELEGRAM
+<p align="center"><b>
+<a href="https://t.me/ToxicSavage" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Telegram&label=Telegram&message=Click%20Here&color=blue"></a><br>
 
-
-## `CONTACT OWNER !`
+## `CONTACT  OWNER !`
 For registering IP:
 <br><br><a href="https://wa.me//254716637803" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Whatsapp&label=Whatsapp&message=Click%20Here&color=#006400">
 
