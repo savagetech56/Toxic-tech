@@ -1,8 +1,4 @@
-<img src="https://raw.githubusercontent.com/savagetech56/Toxic-tech/main/Toxic.jpg" width="380"> 
-</h3>
- 
  <p align="center">
-
 
 <h2 align="center">
 Auto Script Install XRAY/SSH Websocket Service
@@ -28,6 +24,9 @@ Mod By Savagetech56
 ## `CONTACT  OWNER !`
 For registering IP:
 <br><br><a href="https://wa.me//254716637803" target=”_blank”><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=Whatsapp&label=Whatsapp&message=Click%20Here&color=#006400">
+
+<img src="https://raw.githubusercontent.com/savagetech56/Toxic-tech/main/Toxic.jpg" width="380"> 
+</h3>
 
 ## update  OS Ubuntu Version 18 and 20
 ```
