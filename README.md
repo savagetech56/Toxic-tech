@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/savagetech56/Toxic-tech/main/Toxic.jpg" width="300"> 
+<img src="https://raw.githubusercontent.com/savagetech56/Toxic-tech/main/Toxic.jpg" width="380"> 
 </h3>
  
  <p align="center">
